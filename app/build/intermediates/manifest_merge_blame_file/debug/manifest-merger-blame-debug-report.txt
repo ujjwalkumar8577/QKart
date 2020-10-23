@@ -1,0 +1,256 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ujjwalkumar.qkart"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\Projects\QKart\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Projects\QKart\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CALL_PHONE" />
+11-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:4:5-69
+11-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:4:22-66
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:5:5-67
+12-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:6:5-79
+13-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:7:5-80
+14-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:7:22-77
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:8:5-81
+15-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:8:22-78
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:9:5-79
+16-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:9:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\56ffcd59bb4dff27e993561fce14a638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\56ffcd59bb4dff27e993561fce14a638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\56ffcd59bb4dff27e993561fce14a638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+21
+22    <application
+22-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:11:5-102:19
+23        android:allowBackup="true"
+23-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:12:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.3.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\a0ef8046bdb99b9886b4c5338d76261c\core-1.3.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@drawable/app_icon"
+26-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:13:9-42
+27        android:label="Q-Kart"
+27-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:14:9-31
+28        android:largeHeap="true"
+28-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:15:9-33
+29        android:theme="@style/AppTheme" >
+29-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:16:9-40
+30        <activity
+30-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:17:9-25:20
+31            android:name="com.ujjwalkumar.qkart.MainActivity"
+31-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:18:13-41
+32            android:configChanges="orientation|screenSize"
+32-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:19:13-59
+33            android:screenOrientation="portrait" >
+33-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:20:13-49
+34            <intent-filter>
+34-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:21:13-24:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:22:17-69
+35-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:22:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:23:17-77
+37-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:23:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:26:9-29:52
+41            android:name="com.ujjwalkumar.qkart.AuthenticateActivity"
+41-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:27:13-49
+42            android:configChanges="orientation|screenSize"
+42-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:28:13-59
+43            android:screenOrientation="portrait" />
+43-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:29:13-49
+44        <activity
+44-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:30:9-33:52
+45            android:name="com.ujjwalkumar.qkart.EditdetailsActivity"
+45-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:31:13-48
+46            android:configChanges="orientation|screenSize"
+46-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:32:13-59
+47            android:screenOrientation="portrait" />
+47-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:33:13-49
+48        <activity
+48-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:34:9-37:52
+49            android:name="com.ujjwalkumar.qkart.HomeActivity"
+49-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:35:13-41
+50            android:configChanges="orientation|screenSize"
+50-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:36:13-59
+51            android:screenOrientation="portrait" />
+51-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:37:13-49
+52        <activity
+52-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:38:9-41:52
+53            android:name="com.ujjwalkumar.qkart.AccountActivity"
+53-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:39:13-44
+54            android:configChanges="orientation|screenSize"
+54-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:40:13-59
+55            android:screenOrientation="portrait" />
+55-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:41:13-49
+56        <activity
+56-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:42:9-45:52
+57            android:name="com.ujjwalkumar.qkart.AboutActivity"
+57-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:43:13-42
+58            android:configChanges="orientation|screenSize"
+58-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:44:13-59
+59            android:screenOrientation="portrait" />
+59-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:45:13-49
+60        <activity
+60-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:46:9-49:52
+61            android:name="com.ujjwalkumar.qkart.OrderdetailsActivity"
+61-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:47:13-49
+62            android:configChanges="orientation|screenSize"
+62-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:48:13-59
+63            android:screenOrientation="portrait" />
+63-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:49:13-49
+64        <activity
+64-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:50:9-53:52
+65            android:name="com.ujjwalkumar.qkart.ManageitemsActivity"
+65-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:51:13-48
+66            android:configChanges="orientation|screenSize"
+66-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:52:13-59
+67            android:screenOrientation="portrait" />
+67-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:53:13-49
+68        <activity
+68-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:54:9-57:52
+69            android:name="com.ujjwalkumar.qkart.MyordersActivity"
+69-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:55:13-45
+70            android:configChanges="orientation|screenSize"
+70-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:56:13-59
+71            android:screenOrientation="portrait" />
+71-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:57:13-49
+72        <activity
+72-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:58:9-61:52
+73            android:name="com.ujjwalkumar.qkart.MycartActivity"
+73-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:59:13-43
+74            android:configChanges="orientation|screenSize"
+74-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:60:13-59
+75            android:screenOrientation="portrait" />
+75-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:61:13-49
+76        <activity
+76-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:62:9-65:52
+77            android:name="com.ujjwalkumar.qkart.HelpActivity"
+77-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:63:13-41
+78            android:configChanges="orientation|screenSize"
+78-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:64:13-59
+79            android:screenOrientation="portrait" />
+79-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:65:13-49
+80        <activity
+80-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:66:9-69:52
+81            android:name="com.ujjwalkumar.qkart.ShoppinglistActivity"
+81-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:67:13-49
+82            android:configChanges="orientation|screenSize"
+82-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:68:13-59
+83            android:screenOrientation="portrait" />
+83-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:69:13-49
+84        <activity
+84-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:70:9-73:52
+85            android:name="com.ujjwalkumar.qkart.OrderplacedActivity"
+85-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:71:13-48
+86            android:configChanges="orientation|screenSize"
+86-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:72:13-59
+87            android:screenOrientation="portrait" />
+87-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:73:13-49
+88
+89        <meta-data
+89-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:75:9-77:69
+90            android:name="com.google.android.gms.version"
+90-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:76:13-58
+91            android:value="@integer/google_play_services_version" />
+91-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:77:13-66
+92
+93        <provider
+93-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:78:9-82:39
+94            android:name="com.google.firebase.provider.FirebaseInitProvider"
+94-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:79:13-77
+95            android:authorities="com.ujjwalkumar.qkart.firebaseinitprovider"
+95-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:80:13-77
+96            android:directBootAware="true"
+96-->[com.google.firebase:firebase-common:19.3.1] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\90de2e207a7c455b15147d888e5e1cae\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+97            android:exported="false"
+97-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:81:13-37
+98            android:initOrder="100" />
+98-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:82:13-36
+99
+100        <service
+100-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:83:9-95:19
+101            android:name="com.google.firebase.components.ComponentDiscoveryService"
+101-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:84:13-84
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-common:19.3.1] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\90de2e207a7c455b15147d888e5e1cae\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+103            android:exported="false" >
+103-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:85:13-37
+104            <meta-data
+104-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:86:13-88:85
+105                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+105-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:87:17-109
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:88:17-82
+107            <meta-data
+107-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:89:13-91:85
+108                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+108-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:90:17-109
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:91:17-82
+110            <meta-data
+110-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:92:13-94:85
+111                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+111-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:93:17-107
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:94:17-82
+113        </service>
+114
+115        <meta-data
+115-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:96:9-98:55
+116            android:name="com.google.android.geo.API_KEY"
+116-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:97:13-58
+117            android:value="@string/google_maps_key" />
+117-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:98:13-52
+118
+119        <uses-library
+119-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:99:9-101:40
+120            android:name="org.apache.http.legacy"
+120-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:100:13-50
+121            android:required="false" />
+121-->D:\Projects\QKart\app\src\main\AndroidManifest.xml:101:13-37
+122
+123        <activity
+123-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+124            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+124-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+125            android:excludeFromRecents="true"
+125-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+126            android:exported="true"
+126-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+127            android:launchMode="singleTask"
+127-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+128            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+128-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+129            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+129-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\6226feb8e0fb2351d161dad6065cd3dc\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+130        <activity
+130-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\9d661c53592b1f8279a38784a8da1d66\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+131            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+131-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\9d661c53592b1f8279a38784a8da1d66\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+132            android:exported="false"
+132-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\9d661c53592b1f8279a38784a8da1d66\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+133            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+133-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\9d661c53592b1f8279a38784a8da1d66\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+134    </application>
+135
+136</manifest>
