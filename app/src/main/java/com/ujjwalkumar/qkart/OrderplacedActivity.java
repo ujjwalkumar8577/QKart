@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows success message after the order is placed
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;

@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity is the Home activity and opens after splash screen if the user is logged in
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
@@ -66,6 +66,8 @@ public class HomeActivity extends AppCompatActivity {
     private double dlat = 0;
     private double dlon = 0;
     private double a = 0;
+    private double c = 0;
+    private double r = 0;
     private HashMap<String, Object> tmp = new HashMap<>();
     private ArrayList<HashMap<String, Object>> filtered = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> lmp_shops = new ArrayList<>();
@@ -121,6 +123,7 @@ public class HomeActivity extends AppCompatActivity {
         linearorders = (LinearLayout) findViewById(R.id.linearorders);
         linearslist = (LinearLayout) findViewById(R.id.linearslist);
         linearhelp = (LinearLayout) findViewById(R.id.linearhelp);
+        linearaccount = (LinearLayout) findViewById(R.id.linearaccount);
         auth = FirebaseAuth.getInstance();
         sp1 = getSharedPreferences("info", Activity.MODE_PRIVATE);
         checkConnection = new RequestNetwork(this);
@@ -556,14 +559,14 @@ public class HomeActivity extends AppCompatActivity {
 
     @Deprecated
     public int getLocationX(View _v) {
-        int[] _location = new int[2];
+        int _location[] = new int[2];
         _v.getLocationInWindow(_location);
         return _location[0];
     }
 
     @Deprecated
     public int getLocationY(View _v) {
-        int[] _location = new int[2];
+        int _location[] = new int[2];
         _v.getLocationInWindow(_location);
         return _location[1];
     }

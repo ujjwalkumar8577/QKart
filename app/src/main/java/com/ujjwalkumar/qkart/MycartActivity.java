@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows my cart for checking out to final order
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;

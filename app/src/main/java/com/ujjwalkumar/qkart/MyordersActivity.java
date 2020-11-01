@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows all orders of the customer
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;

@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows shoping list items
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -112,7 +112,6 @@ public class ShoppinglistActivity extends AppCompatActivity {
             ((BaseAdapter) listview1.getAdapter()).notifyDataSetChanged();
         }
     }
-
 
     public class Listview1Adapter extends BaseAdapter {
         ArrayList<HashMap<String, Object>> _data;

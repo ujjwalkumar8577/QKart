@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows My Account section
 import android.Manifest;
 import android.app.Activity;
 import android.content.ClipData;

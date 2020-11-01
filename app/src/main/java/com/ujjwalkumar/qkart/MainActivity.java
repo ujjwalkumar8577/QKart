@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows the Splash screen
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;

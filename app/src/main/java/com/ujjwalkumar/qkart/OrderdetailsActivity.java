@@ -1,5 +1,5 @@
 package com.ujjwalkumar.qkart;
-
+// this activity shows order details of a particular order
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
