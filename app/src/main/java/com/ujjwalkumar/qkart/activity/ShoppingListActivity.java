@@ -129,9 +129,14 @@ public class ShoppingListActivity extends AppCompatActivity {
             }
 
             imageviewdelete.setOnClickListener(view1 -> {
-                lmp.remove(position);
-                sp1.edit().putString("slist", new Gson().toJson(lmp)).apply();
-                refreshList();
+                try {
+                    lmp.remove(position);
+                    sp1.edit().putString("slist", new Gson().toJson(lmp)).apply();
+                    refreshList();
+                }
+                catch (Exception e) {
+                    refreshList();
+                }
             });
 
             return v;

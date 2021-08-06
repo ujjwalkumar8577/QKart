@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,15 +40,11 @@ public class ManageItemsActivity extends AppCompatActivity {
     private String selleruid = "";
     private double s = 0;
     private double amt = 0;
-    private HashMap<String, Object> tmp = new HashMap<>();
     private HashMap<String, Object> seller = new HashMap<>();
     private HashMap<String, Object> itm = new HashMap<>();
-    private HashMap<String, Object> tmp1 = new HashMap<>();
-    private ArrayList<HashMap<String, Object>> lmpitems = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> filtered = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> cart = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> slist = new ArrayList<>();
-    private ArrayList<HashMap<String, Object>> lmpitems1 = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> filtered1 = new ArrayList<>();
 
     private ImageView imageviewback;
@@ -99,18 +96,12 @@ public class ManageItemsActivity extends AppCompatActivity {
         }
         linearreview.setVisibility(View.GONE);
         imageviewtoggle.setImageResource(R.drawable.ic_keyboard_arrow_down_black);
-        s = 0;
         seller = new Gson().fromJson(getIntent().getStringExtra("map"), new TypeToken<HashMap<String, Object>>() {}.getType());
-        amt = 0;
         selleruid = seller.get("uid").toString();
         textviewshopname.setText(seller.get("name").toString());
         textviewaddress.setText(seller.get("address").toString());
         textviewcontact.setText(seller.get("contact").toString());
-
-        listviewitems.setAdapter(new ListviewitemsAdapter(filtered));
         loadList();
-
-        listviewreviews.setAdapter(new ListviewreviewsAdapter(filtered1));
         loadReviews();
 
         imageviewback.setOnClickListener(view -> finish());
@@ -146,27 +137,23 @@ public class ManageItemsActivity extends AppCompatActivity {
         db4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                lmpitems = new ArrayList<>();
                 filtered = new ArrayList<>();
                 try {
                     GenericTypeIndicator<HashMap<String, Object>> ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
                     for (DataSnapshot data : snapshot.getChildren()) {
                         HashMap<String, Object> map = data.getValue(ind);
-                        lmpitems.add(map);
+                        if (map.get("sellerid").toString().equals(selleruid) && map.get("status").toString().equals("1")) {
+                            map.put("qty", "0");
+                            filtered.add(map);
+                        }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < lmpitems.size(); i++) {
-                    if (lmpitems.get(i).get("sellerid").toString().equals(selleruid) && lmpitems.get(i).get("status").toString().equals("1")) {
-                        tmp = lmpitems.get(i);
-                        tmp.put("qty", "0");
-                        filtered.add(tmp);
-                    }
-                }
                 if (filtered.size() > 0) {
                     textviewstatus.setVisibility(View.GONE);
+                    listviewitems.setAdapter(new ListviewitemsAdapter(filtered));
                     ((BaseAdapter) listviewitems.getAdapter()).notifyDataSetChanged();
                 } else {
                     textviewstatus.setText("This seller has not added any items yet.");
@@ -194,28 +181,24 @@ public class ManageItemsActivity extends AppCompatActivity {
     }
 
     private void loadReviews() {
-        db5.addListenerForSingleValueEvent(new ValueEventListener() {
+        db5.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                lmpitems1 = new ArrayList<>();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 filtered1 = new ArrayList<>();
                 try {
                     GenericTypeIndicator<HashMap<String, Object>> ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
-                    for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    for (DataSnapshot data : snapshot.getChildren()) {
                         HashMap<String, Object> map = data.getValue(ind);
-                        lmpitems1.add(map);
+                        if (map.get("sellerid").toString().equals(selleruid)) {
+                            filtered1.add(map);
+                        }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < lmpitems1.size(); i++) {
-                    if (lmpitems1.get(i).get("sellerid").toString().equals(selleruid)) {
-                        tmp1 = lmpitems1.get(i);
-                        filtered1.add(tmp1);
-                    }
-                }
                 if (filtered1.size() > 0) {
+                    listviewreviews.setAdapter(new ListviewreviewsAdapter(filtered1));
                     ((BaseAdapter) listviewitems.getAdapter()).notifyDataSetChanged();
                     textviewnoreview.setText(String.valueOf((long) (filtered1.size())).concat(" reviews"));
                 } else {
@@ -224,7 +207,8 @@ public class ManageItemsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

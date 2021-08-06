@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -62,8 +61,6 @@ public class HomeActivity extends AppCompatActivity {
     private final Intent inh = new Intent();
     private final FirebaseDatabase firebase = FirebaseDatabase.getInstance();
     private final DatabaseReference db1 = firebase.getReference("sellers");
-    private final DatabaseReference db2 = firebase.getReference("consumers");
-    private final DatabaseReference db3 = firebase.getReference("orders");
     private final ObjectAnimator ani1 = new ObjectAnimator();
     private SharedPreferences sp1;
 

@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
@@ -79,20 +78,16 @@ public class CartActivity extends AppCompatActivity {
         linearplaceorder = findViewById(R.id.linearplaceorder);
 
         sp1 = getSharedPreferences("info", Activity.MODE_PRIVATE);
+        cal = Calendar.getInstance();
 
         GradientDrawable gd1 = new GradientDrawable();
         gd1.setColor(Color.parseColor("#FF1744"));
         gd1.setCornerRadius(30);
         linearplaceorder.setBackground(gd1);
 
-        lineardetail.setVisibility(View.GONE);
-        textviewshowhide.setText("Show details");
         sellermap = new Gson().fromJson(getIntent().getStringExtra("sellermap"), new TypeToken<HashMap<String, Object>>() {}.getType());
         cart = new Gson().fromJson(getIntent().getStringExtra("itemmap"), new TypeToken<ArrayList<HashMap<String, Object>>>() {}.getType());
-        textviewsellername.setText(sellermap.get("name").toString());
-        textviewselleradd.setText(sellermap.get("address").toString());
-        textviewaddress.setText(sp1.getString("address", ""));
-        textviewamt.setText(getIntent().getStringExtra("amount"));
+
         custmap = new HashMap<>();
         custmap.put("custid", sp1.getString("uid", ""));
         custmap.put("name", sp1.getString("name", ""));
@@ -100,7 +95,7 @@ public class CartActivity extends AppCompatActivity {
         custmap.put("lat", sp1.getString("lat", ""));
         custmap.put("lng", sp1.getString("lng", ""));
         custmap.put("contact", sp1.getString("contact", ""));
-        cal = Calendar.getInstance();
+
         order = new HashMap<>();
         order.put("oid", db3.push().getKey());
         order.put("selleruid", sellermap.get("uid").toString());
@@ -112,6 +107,14 @@ public class CartActivity extends AppCompatActivity {
         order.put("custmap", new Gson().toJson(custmap));
         order.put("sellermap", new Gson().toJson(sellermap));
         order.put("itemmap", getIntent().getStringExtra("itemmap"));
+
+        lineardetail.setVisibility(View.GONE);
+        textviewshowhide.setText("Show details");
+        textviewsellername.setText(sellermap.get("name").toString());
+        textviewselleradd.setText(sellermap.get("address").toString());
+        textviewaddress.setText(sp1.getString("address", ""));
+        textviewamt.setText(getIntent().getStringExtra("amount"));
+
         listview1.setAdapter(new Listview1Adapter(cart));
         ((BaseAdapter) listview1.getAdapter()).notifyDataSetChanged();
 

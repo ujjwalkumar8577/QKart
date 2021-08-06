@@ -32,14 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         anix.setTarget(layout);
         anix.setPropertyName("scaleX");
-        anix.setFloatValues((float) (0.0d), (float) (1.0d));
+        anix.setFloatValues(0, 1);
         anix.setInterpolator(new DecelerateInterpolator());
-        anix.setDuration((int) (500));
+        anix.setDuration(500);
         aniy.setTarget(layout);
         aniy.setPropertyName("scaleY");
-        aniy.setFloatValues((float) (0.0d), (float) (1.0d));
+        aniy.setFloatValues(0, 1);
         aniy.setInterpolator(new DecelerateInterpolator());
-        aniy.setDuration((int) (500));
+        aniy.setDuration(500);
         anix.start();
         aniy.start();
         splash = new TimerTask() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         };
-        timer.schedule(splash, (int) (500));
+        timer.schedule(splash,500);
     }
 
 }
