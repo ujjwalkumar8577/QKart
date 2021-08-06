@@ -1,49 +1,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="4dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:focusable="false"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/review"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
-        android:id="@+id/linear1"
+        android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageview1"
+        <TextView
+            android:id="@+id/textviewname"
             android:focusable="false"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/review"
-            android:scaleType="centerCrop" />
-
-        <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:padding="8dp"
+            android:text="Name"
+            android:textSize="12sp"
+            android:textColor="#FF1744" />
 
-            <TextView
-                android:id="@+id/textviewname"
-                android:focusable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="Name"
-                android:textSize="12sp"
-                android:textColor="#FF1744" />
-
-            <TextView
-                android:id="@+id/textviewreview"
-                android:focusable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:padding="4dp"
-                android:text="Review"
-                android:textSize="12sp"
-                android:textColor="#000000" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textviewreview"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:padding="4dp"
+            android:text="Review"
+            android:textSize="12sp"
+            android:textColor="#000000" />
     </LinearLayout>
+
 </LinearLayout>
